@@ -1,5 +1,6 @@
 package com.dibakar.games.guesstheword.service;
 
+import com.dibakar.games.guesstheword.exception.GuessTheWordException;
 import com.dibakar.games.guesstheword.model.GuessTheWordGame;
 
 public interface GuessTheWordService {
@@ -9,13 +10,13 @@ public interface GuessTheWordService {
      * This method creates a new game and returns the GuessTheWordGame object
      * @return guessTheWordGame
      */
-    GuessTheWordGame createGame();
+    GuessTheWordGame createGame() throws GuessTheWordException;
     /**
      * date:19/07/2022
      * @auther Dibakar
      * This method holds the play logic and returns the GuessTheWordGame object
      * @return guessTheWordGame
      */
-    GuessTheWordGame playGame(String letter);
+    GuessTheWordGame playGame(String letter) throws GuessTheWordException;
 
 }
